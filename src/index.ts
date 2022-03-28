@@ -1,0 +1,1 @@
+export { GoogleCastProvider } from './provider'

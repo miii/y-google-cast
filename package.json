@@ -1,0 +1,59 @@
+{
+  "name": "@miii/y-google-cast",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/miii/y-google-cast",
+  "author": {
+    "name": "Jacob Andersson",
+    "url": "https://github.com/miii"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miii/y-google-cast.git"
+  },
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
+  "keywords": [
+    "yjs",
+    "provider",
+    "google",
+    "cast",
+    "chromecast",
+    "crdt"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "unbuild",
+    "build:playground": "vite build --outDir dist-playground",
+    "release": "standard-version"
+  },
+  "dependencies": {
+    "lib0": "^0.2.46",
+    "y-protocols": "^1.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.2.4",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.6.3",
+    "unbuild": "^0.7.0",
+    "unplugin-vue-components": "^0.18.5",
+    "vite": "^2.8.6",
+    "vue": "^3.2.31",
+    "yjs": "^13.5.28"
+  },
+  "peerDependencies": {
+    "yjs": "^13"
+  }
+}
