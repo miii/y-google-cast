@@ -37,8 +37,7 @@
   "scripts": {
     "dev": "vite",
     "build": "unbuild",
-    "build:playground": "vite build --outDir dist-playground",
-    "prepublishOnly": "pnpm build && standard-version"
+    "build:playground": "vite build --outDir dist-playground"
   },
   "dependencies": {
     "lib0": "^0.2.46",
