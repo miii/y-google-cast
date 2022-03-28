@@ -1,7 +1,7 @@
 {
   "name": "@miii/y-google-cast",
   "description": "Google Cast connection provider for Yjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "homepage": "https://github.com/miii/y-google-cast",
   "author": {
