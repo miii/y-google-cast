@@ -1,4 +1,5 @@
-import { decoding, encoding } from 'lib0'
+import * as encoding from 'lib0/encoding'
+import * as decoding from 'lib0/decoding'
 
 /**
  * Each message is prefixed with a message type
