@@ -1,5 +1,6 @@
 {
   "name": "@miii/y-google-cast",
+  "description": "Google Cast connection provider for Yjs",
   "version": "1.0.0",
   "license": "MIT",
   "homepage": "https://github.com/miii/y-google-cast",
@@ -37,7 +38,7 @@
     "dev": "vite",
     "build": "unbuild",
     "build:playground": "vite build --outDir dist-playground",
-    "release": "standard-version"
+    "prepublishOnly": "pnpm build && standard-version"
   },
   "dependencies": {
     "lib0": "^0.2.46",
