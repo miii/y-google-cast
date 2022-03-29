@@ -11,7 +11,11 @@ export class CastSender extends CastManager<CastSenderOptions> {
     // Saved potentional implementation
     const origImpl = window.__onGCastApiAvailable
     // Add callback on cast ready
-    window.__onGCastApiAvailable = () => {
+    window.__onGCastApiAvailable = (success, message) => {
+      // Throw error if initialization failed
+      if (!success)
+        throw new Error(message)
+
       // Set context
       this._context = window.cast.framework.CastContext.getInstance()
       this._context.setOptions(this._options)
