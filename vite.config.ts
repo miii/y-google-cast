@@ -4,6 +4,9 @@ import { resolve } from 'path'
 import VuePlugin from '@vitejs/plugin-vue'
 import ComponentsPlugin from 'unplugin-vue-components/vite'
 
+/**
+ * Playground build config
+ */
 export default defineConfig({
   resolve: {
     alias: {

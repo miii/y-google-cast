@@ -37,6 +37,14 @@ const castProvider = new GoogleCastProvider(doc, 'sender', { receiverApplication
 ```
 Your application ID can be found in the [Cast SDK Developer Console](https://cast.google.com/publish/#/overview).
 
+## 🖥️ Confirmed devices
+Unfortunately, [testing Cast integrations is currently manual](https://developers.google.com/cast/docs/testing#cast) which makes it hard to guarantee support on every possible device. The list below contains devices which are tested and should work as expected. Please submit a PR if you have further information about other devices.
+
+| Device            | Latest confirmed version |
+| ---               | ---                      |
+| Google TV         | `v1.0.4`                 |
+| Chromecast gen 1  | `v1.0.4`                 |
+
 ## 🛠️ API
 ```ts
 /**
