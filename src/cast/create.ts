@@ -11,7 +11,8 @@ declare global {
  * @param factory Function to create instance
  */
 const getSingletonInstance = <T extends CastManager>(factory: () => T) => {
-  const gt = globalThis || window
+  // Use globalThis or window to store singleton instance
+  const gt = typeof globalThis !== 'undefined' ? globalThis : window
 
   if (!gt.ygooglecast_castmanager)
     gt.ygooglecast_castmanager = factory()
