@@ -105,7 +105,8 @@ export class CastReceiver extends CastManager<CastReceiverOptions> {
    * Recursively check ready state and emit ready event
    */
   private _awaitReadyState (): Promise<void> {
-    if (window.cast?.framework?.CastReceiverContext)
+    // Skip optional chaining even in dev since it's not supported by older cast devices
+    if (window.cast && window.cast.framework && window.cast.framework.CastReceiverContext)
       return Promise.resolve()
     
     return new Promise(resolve => setTimeout(() => this._awaitReadyState().then(resolve), 100))
